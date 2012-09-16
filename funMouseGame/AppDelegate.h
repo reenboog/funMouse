@@ -1,10 +1,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PushNotificationManager.h"
+#import <RevMobAds/RevMobAds.h>
 
 @class RootViewController;
 
-@interface AppDelegate: NSObject <UIApplicationDelegate, PushNotificationDelegate, ChartBoostDelegate> 
+@interface AppDelegate: NSObject <UIApplicationDelegate, PushNotificationDelegate, ChartBoostDelegate, RevMobAdsDelegate> 
 {
 	UIWindow			*window;
 	RootViewController	*viewController;

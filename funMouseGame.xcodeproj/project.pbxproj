@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04FC17D91606296500CE76CB /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC17D81606296500CE76CB /* RevMobAds.framework */; };
 		B806A3C31482A60D0054AE2F /* PushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B806A3BF1482A60D0054AE2F /* PushNotificationManager.m */; };
 		B806A3C41482A60D0054AE2F /* HtmlWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B806A3C01482A60D0054AE2F /* HtmlWebViewController.m */; };
 		B8093953146C26B10014EF0D /* gameFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = B8093951146C26B10014EF0D /* gameFont.fnt */; };
@@ -180,6 +181,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04FC17D81606296500CE76CB /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		B806A3BF1482A60D0054AE2F /* PushNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationManager.m; sourceTree = "<group>"; };
 		B806A3C01482A60D0054AE2F /* HtmlWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlWebViewController.m; sourceTree = "<group>"; };
 		B806A3C11482A60D0054AE2F /* PushNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotificationManager.h; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 				B8A84F09146AF9FD00195387 /* CoreGraphics.framework in Frameworks */,
 				B8BD90951482302F0016577A /* libApsalar.a in Frameworks */,
 				B8BD90AE1482308E0016577A /* libChartBoost.a in Frameworks */,
+				04FC17D91606296500CE76CB /* RevMobAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +560,7 @@
 		B8A84EEB146AF9FD00195387 = {
 			isa = PBXGroup;
 			children = (
+				04FC17D81606296500CE76CB /* RevMobAds.framework */,
 				B8093982146C5AC70014EF0D /* SystemConfiguration.framework */,
 				B8093980146C5AB50014EF0D /* libsqlite3.0.dylib */,
 				B8A84F0A146AF9FD00195387 /* funMouseGame */,
@@ -1264,12 +1268,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: McLeod Agency, Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: McLeod Agency, Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Judith Krieger (9988HR8NU9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Judith Krieger (9988HR8NU9)";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = funMouseGame/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = funMouseGame/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
@@ -1281,8 +1290,8 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C17C2A17-B38E-4DEB-9F14-404078AB6ACF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C17C2A17-B38E-4DEB-9F14-404078AB6ACF";
+				PROVISIONING_PROFILE = "3D702F02-2BE4-4924-B8D2-29351F42AD07";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D702F02-2BE4-4924-B8D2-29351F42AD07";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1332,13 +1341,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jeffrey McLeod (ZKHCZ235BN)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: McLeod Agency, Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Judith Krieger (9988HR8NU9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Judith Krieger (9988HR8NU9)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = funMouseGame/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = funMouseGame/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
@@ -1350,8 +1364,8 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2E5EB023-1F7B-46D8-9DC5-24EB8A3FDF9B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C17C2A17-B38E-4DEB-9F14-404078AB6ACF";
+				PROVISIONING_PROFILE = "3D702F02-2BE4-4924-B8D2-29351F42AD07";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D702F02-2BE4-4924-B8D2-29351F42AD07";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1362,11 +1376,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Judith Krieger (9988HR8NU9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Judith Krieger (9988HR8NU9)";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = funMouseGame/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = funMouseGame/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
@@ -1378,6 +1398,8 @@
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3D702F02-2BE4-4924-B8D2-29351F42AD07";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D702F02-2BE4-4924-B8D2-29351F42AD07";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

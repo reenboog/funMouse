@@ -10,6 +10,8 @@
 #import "GameLayer.h"
 #import "RootViewController.h"
 
+#import <RevMobAds/RevMobAds.h>
+
 @implementation AppDelegate
 
 @synthesize window;
@@ -48,6 +50,8 @@
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [RevMobAds startSessionWithAppID: @"5055f4e0a9d19d0c0000001e"];
+    
 //    return YES;
 //}
 //
@@ -179,6 +183,11 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    
+    //[RevMobAds showBannerAd];
+    
+    [RevMobAds showFullscreenAd];
+    
 	[[CCDirector sharedDirector] resume];
     
     ChartBoost *cb = [ChartBoost sharedChartBoost];
