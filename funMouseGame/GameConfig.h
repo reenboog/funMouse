@@ -31,8 +31,7 @@
 
 // ARMv6 (1st and 2nd generation devices): Don't rotate. It is very expensive
 #elif __arm__
-#define GAME_AUTOROTATION kGameAutorotationNone
-
+#define GAME_AUTOROTATION kGameAutorotationCCDirector
 
 // Ignore this value on Mac
 #elif defined(__MAC_OS_X_VERSION_MAX_ALLOWED)
@@ -40,6 +39,39 @@
 #else
 #error(unknown architecture)
 #endif
+
+//constants
+#define kTotalMice 2
+#define kMaxScoreKey @"maxScoreKey"
+
+#define kScreenHeight       480
+#define kScreenWidth        320
+
+#define kScreenHeightHD     1024
+#define kScreenWidthHD      768
+#define kMouseTag           679
+
+#define zBestResult         10
+
+#define kInfoBtnRelativeX (0.45)
+#define kInfoBtnRelativeY 0  
+
+#define kHelpBtnRelativeX 0
+#define kHelpBtnRelativeY 0 
+
+#define kResetBtnRelativeX (-0.45)
+#define kResetBtnRelativeY 0 
+
+#define kRequestMoreAppsNotificationKey @"requestMoreApps"
+#define kRequestMoreInterstitialKey     @"requestMoreInterstitial"
+
+extern float GameWidth;
+extern float GameHeight;
+extern float GameCenterX;
+extern float GameCenterY;
+extern CGPoint GameCenterPos;
+extern BOOL IsIPad;
+extern BOOL CanDisplayChartBoost;
 
 #endif // __GAME_CONFIG_H
 

@@ -1,20 +1,23 @@
-//
-//  AppDelegate.h
-//  funMouseGame
-//
-//  Created by Alex Gievsky on 10.11.11.
-//  Copyright alex.gievsky@gmail.com 2011. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
+#import "PushNotificationManager.h"
 
 @class RootViewController;
 
-@interface AppDelegate : NSObject <UIApplicationDelegate> {
+@interface AppDelegate: NSObject <UIApplicationDelegate, PushNotificationDelegate, ChartBoostDelegate> 
+{
 	UIWindow			*window;
 	RootViewController	*viewController;
+    UINavigationController *navigationController;
+    
+    PushNotificationManager *pushManager;
 }
 
+- (void) requestMoreApps: (NSNotification *) notification;
+- (void) requestMoreInterstitial: (NSNotification *) notification;
+
 @property (nonatomic, retain) UIWindow *window;
+@property (nonatomic, retain) PushNotificationManager *pushManager;
+@property (nonatomic, retain) UINavigationController *navigationController;
 
 @end
