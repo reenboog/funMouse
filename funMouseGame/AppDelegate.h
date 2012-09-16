@@ -16,6 +16,7 @@
 
 - (void) requestMoreApps: (NSNotification *) notification;
 - (void) requestMoreInterstitial: (NSNotification *) notification;
+- (void) scheduleNotification;
 
 @property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) PushNotificationManager *pushManager;
